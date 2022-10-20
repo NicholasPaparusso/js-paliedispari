@@ -9,28 +9,28 @@ Dichiariamo chi ha vinto.
 
 const choice = prompt('pari o dispari');
 const userNum = parseInt(prompt('inserisci un numero da 1 a 5'));
+var randomNum = random(5,1);
+var somma = sum(userNum,randomNum)
 console.log("hai scelto: ", choice);
 console.log("il numero scelto è: ", userNum);
+console.log("il numero della cpu è: ", randomNum);
+console.log(sum("la somma dei due numeri è: ", somma));
+let oddEven = compare();
 
 
-function random(){
-let randomNum = Math.ceil(Math.random()*5);
+
+
+function random(max,min){
+  return Math.floor(Math.random() * (max - min + 1) + min);
 return randomNum;
 }
-
-var randomNum = random();
-console.log("il numero della cpu è: ", randomNum)
-
 
 function sum(n1,n2){
   numSum = n1 + n2;
   return numSum;
 }
- var somma = sum(userNum,randomNum)
 
-console.log(sum("la somma dei due numeri è: ", somma))
-
- function compare(){
+function compare(){
   if(somma % 2 === 0 && choice === "pari"){
     console.log('la somma dei numeri è pari - hai vinto');
   }else if(somma % 2 === 0 && choice === "dispari" ){
@@ -42,4 +42,9 @@ console.log(sum("la somma dei due numeri è: ", somma))
   }
  }
 
- let oddEven = compare();
+
+
+
+
+
+ 
