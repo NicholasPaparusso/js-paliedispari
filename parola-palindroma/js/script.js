@@ -13,6 +13,11 @@ const output = document.querySelector('#output');
  btn.addEventListener('click', function(){
   reverse(word);
 })
+input.addEventListener('keypress', function(e){
+  if(e.key ==='Enter'){
+  reverse(word);
+}
+})
 // Creo la mia funzione
  function reverse(wordToCheck) {
   input.focus();
