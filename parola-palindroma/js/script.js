@@ -30,7 +30,7 @@ input.addEventListener('keypress', function(e){
   for(let i = word.length - 1; i >= 0; i--) {
   reversedWord += word[i]
     }
-    if (reversedWord === word){
+    if (reversedWord.toLowerCase() === word.toLowerCase()){
       output.innerText = "La parola è palindroma";
       word = "";
       input.value ="";
